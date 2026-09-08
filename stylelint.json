@@ -1,0 +1,100 @@
+{
+  "extends": "stylelint-config-standard-scss",
+  "rules": {
+    "property-disallowed-list": [
+      [
+        "margin-top",
+        "margin-bottom",
+        "margin-left",
+        "margin-right",
+        "padding-top",
+        "padding-bottom",
+        "padding-left",
+        "padding-right",
+        "border-top",
+        "border-bottom",
+        "border-left",
+        "border-right",
+        "top",
+        "bottom",
+        "left",
+        "right",
+        "float",
+        "clear"
+      ],
+      {
+        "severity": "warning",
+        "message": "Propriete physique : utiliser la propriete logique (padding-block, inset-inline-start, ...)"
+      }
+    ],
+    "max-nesting-depth": [
+      3,
+      {
+        "ignore": [
+          "pseudo-classes"
+        ],
+        "ignoreAtRules": [
+          "media",
+          "supports",
+          "include",
+          "each",
+          "if"
+        ]
+      }
+    ],
+    "declaration-no-important": [
+      true,
+      {
+        "severity": "warning"
+      }
+    ],
+    "at-rule-disallowed-list": [
+      [
+        "media"
+      ],
+      {
+        "severity": "warning",
+        "message": "@media brut : preferer les mixins de breakpoints (mobile, tablet-and-below, laptop)"
+      }
+    ],
+    "no-descending-specificity": null,
+    "scss/dollar-variable-pattern": null,
+    "scss/at-extend-no-missing-placeholder": null,
+    "scss/comment-no-empty": null,
+    "scss/double-slash-comment-empty-line-before": null,
+    "comment-empty-line-before": null,
+    "declaration-empty-line-before": null,
+    "rule-empty-line-before": null,
+    "color-function-notation": null,
+    "color-function-alias-notation": null,
+    "alpha-value-notation": null,
+    "selector-not-notation": null,
+    "declaration-block-no-redundant-longhand-properties": null,
+    "media-feature-range-notation": null,
+    "custom-property-empty-line-before": null,
+    "number-max-precision": null,
+    "selector-id-pattern": null,
+    "custom-property-pattern": null,
+    "scss/no-global-function-names": null,
+    "value-keyword-case": [
+      "lower",
+      {
+        "ignoreKeywords": [
+          "currentColor"
+        ]
+      }
+    ],
+    "font-family-name-quotes": null,
+    "at-rule-empty-line-before": null,
+    "property-no-vendor-prefix": null,
+    "selector-disallowed-list": [
+      [
+        "/\\.js[_-][a-z]/"
+      ],
+      {
+        "severity": "warning",
+        "message": "Classe js_* stylee : le style se raccroche a un hook JS, decorreler"
+      }
+    ]
+  }
+}

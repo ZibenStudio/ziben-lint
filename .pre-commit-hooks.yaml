@@ -1,0 +1,14 @@
+- id: qweb-lint
+  name: Directives QWeb depreciees
+  description: Erreur sur t-raw, <tree>, attrs= et states= ; avertit sur t-esc et les xpath sur @class.
+  entry: tools/lint-qweb.py
+  language: python
+  files: \.xml$
+
+- id: pylint-odoo
+  name: pylint-odoo (config Ziben)
+  description: pylint-odoo avec le pylintrc partage, faux positifs deja ecartes.
+  entry: tools/run-pylint-odoo.py
+  language: python
+  types: [python]
+  additional_dependencies: ["pylint-odoo==9.3.2"]

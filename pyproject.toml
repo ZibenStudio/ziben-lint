@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ziben-lint"
+version = "1.0.0"
+description = "Regles de lint Odoo partagees par les projets Ziben"
+requires-python = ">=3.10"
+dependencies = ["pylint-odoo==9.3.2"]
+
+[project.scripts]
+ziben-qweb-lint = "ziben_lint.qweb:cli"
+ziben-pylint-odoo = "ziben_lint.pylint_runner:cli"
+
+[tool.setuptools.package-data]
+ziben_lint = ["pylintrc"]

@@ -3,7 +3,7 @@
   description: Erreur sur t-raw, <tree>, attrs= et states= ; avertit sur t-esc et les xpath sur @class.
   entry: ziben-qweb-lint
   language: python
-  files: \\.xml$
+  files: \.xml$
 
 - id: pylint-odoo
   name: pylint-odoo (config Ziben)

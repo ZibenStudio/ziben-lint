@@ -40,6 +40,29 @@ import base from '@ziben/lint-config/eslint';
 export default [{ ignores: ['enterprise/**'] }, base];
 ```
 
+## Preset front (TypeScript, React, Next, Payload)
+
+`@ziben/lint-config/eslint-front` traduit en erreurs les regles de la reference
+front : `no-explicit-any`, `@ts-expect-error` avec description seulement,
+`type` plutot qu'`interface`, un composant par fichier, `jsx-a11y` recommande,
+`react-hooks/exhaustive-deps`, `useEffect` refuse hors d'un dossier `effects/`,
+et code serveur importe depuis un composant `'use client'` (ou l'inverse)
+refuse. Chaque message dit quoi faire a la place.
+
+```json
+{ "devDependencies": { "@ziben/lint-config": "github:ZibenStudio/ziben-lint", "typescript-eslint": "^8", "eslint-plugin-react": "^7", "eslint-plugin-react-hooks": "^7", "eslint-plugin-jsx-a11y": "^6" } }
+```
+
+```js
+// eslint.config.mjs du projet
+import { zibenFront } from '@ziben/lint-config/eslint-front';
+export default [{ ignores: ['.next/**'] }, ...zibenFront({ tsconfigRootDir: import.meta.dirname })];
+```
+
+Les imports serveur reconnus : `server-only`, un dossier `server/`, un fichier
+`*.server` ; cote client : `client-only`, `*.client`. `npm run test:front`
+verifie chaque regle sur `fixtures/front`.
+
 ## Ce qui reste au projet
 
 Ce qui nomme un client n'a rien a faire ici : le prefixe de classe, les jetons

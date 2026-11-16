@@ -48,6 +48,12 @@ facon, autant n'en avoir qu'un pour le front.
 Cote projets : `pre-commit autoupdate` pour le Python, `npm update
 @ziben/lint-config` pour le front.
 
+## Preset front
+
+`eslint-front.mjs` (export `./eslint-front`) porte les regles TypeScript, React,
+Next et Payload. Une regle ajoutee ou changee garde un cas mauvais et un cas bon
+dans `fixtures/front` et une ligne dans `tools/test-front.mjs` (`npm run test:front`).
+
 ## Desactiver une regle
 
 Seulement sur preuve, et la preuve va dans le message de commit. Les regles

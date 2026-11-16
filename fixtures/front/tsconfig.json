@@ -1,0 +1,4 @@
+{
+  "compilerOptions": { "strict": true, "jsx": "preserve", "module": "esnext", "moduleResolution": "bundler", "target": "es2022", "noEmit": true, "skipLibCheck": true, "types": [] },
+  "include": ["**/*.ts", "**/*.tsx"]
+}

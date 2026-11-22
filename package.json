@@ -1,6 +1,6 @@
 {
   "name": "@ziben/lint-config",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Bases stylelint et eslint des projets Ziben (Odoo, et preset TypeScript React Next Payload). Aucune regle propre a un client.",
   "license": "MIT",
   "exports": {
@@ -14,7 +14,7 @@
     "eslint-front.mjs"
   ],
   "peerDependencies": {
-    "eslint": ">=10",
+    "eslint": ">=9.24",
     "stylelint": ">=17",
     "stylelint-config-standard-scss": ">=17",
     "typescript-eslint": ">=8.57",
@@ -22,7 +22,7 @@
     "eslint-plugin-react-hooks": ">=7",
     "eslint-plugin-jsx-a11y": ">=6.10",
     "typescript": ">=5.9",
-    "@eslint/js": ">=10",
+    "@eslint/js": ">=9.24",
     "globals": ">=17"
   },
   "devDependencies": {

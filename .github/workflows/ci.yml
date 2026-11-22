@@ -13,3 +13,5 @@ jobs:
           node-version: 22
       - run: npm ci --legacy-peer-deps
       - run: npm run test:front
+      - run: npm install --no-save --legacy-peer-deps eslint@^9.24 @eslint/js@^9.24
+      - run: npm run test:front

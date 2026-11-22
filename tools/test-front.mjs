@@ -14,11 +14,13 @@ const cases = [
     ['use-effect/bad.tsx', 'no-restricted-syntax', 'useEffect sert a'],
     ['client-imports-server/bad.tsx', 'no-restricted-syntax', "'use client' ne peut pas importer"],
     ['server-imports-client/bad.ts', 'no-restricted-syntax', 'server-only ne peut pas importer'],
+    ['dot-notation/bad.ts', '@typescript-eslint/dot-notation'],
 ];
 const goods = [
     'no-explicit-any/good.ts', 'ban-ts-comment/good.ts', 'no-multi-comp/good.tsx',
     'consistent-type-definitions/good.ts', 'jsx-a11y/good.tsx', 'exhaustive-deps/good.tsx',
     'use-effect/effects/good.tsx', 'client-imports-server/good.tsx', 'server-imports-client/good.ts',
+    'dot-notation/good.ts',
 ];
 
 const eslint = new ESLint({ cwd });

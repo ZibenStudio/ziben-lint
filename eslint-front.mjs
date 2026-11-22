@@ -64,6 +64,8 @@ export function zibenFront({ tsconfigRootDir, effectsFolders = ['**/effects/**']
                     },
                 ],
                 '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
+                // CSS Modules en BEM : styles['bloc__element'] reste en crochets, le module est type par une signature d'index.
+                '@typescript-eslint/dot-notation': ['error', { allowIndexSignaturePropertyAccess: true }],
                 'react/no-multi-comp': ['error', { ignoreStateless: false }],
                 'react-hooks/rules-of-hooks': 'error',
                 'react-hooks/exhaustive-deps': 'error',
